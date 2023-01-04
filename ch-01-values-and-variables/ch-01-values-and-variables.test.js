@@ -24,4 +24,11 @@ describe('Chapter 1. Values And Variables', () => {
 
         expect(badFunction).toThrow();
     });
+
+    it('1.4 void two obsolete forms of variable declarations, with the var keyword and with no keyword at all (misspelling creates a new variable)', () => {
+        var counter = 0; // Obsolete
+        coutner = 1; // Note the misspelling - creates a new variable
+        expect(counter).toBe(0);
+        expect(coutner).toBe(1);
+    });
 });
