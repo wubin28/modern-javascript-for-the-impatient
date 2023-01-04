@@ -15,4 +15,13 @@ describe('Chapter 1. Values And Variables', () => {
         let x;
         expect(x).toBeUndefined();
     });
+
+    it('1.4 if you try to modify the value contained in a const, a run-time error occurs', () => {
+        const badFunction = () => {
+            const PI = 3.14;
+            PI = 3.1416;
+        }
+
+        expect(badFunction).toThrow();
+    });
 });
