@@ -84,4 +84,10 @@ describe('Chapter 1: Values And Variables', () => {
         expect('Hello \n'.length).toBe(7); // The newline character requires a single 16-bit code unit
         expect('Hello 😂'.length).toBe(8); // The face with tears of joy emoji requires two 16-bit code units
     });
+
+    it('1.11: Template literals are strings that can contain expressions and span multiple lines. These strings are delimited by backticks (`. . .`).', () => {
+        let destination = 'world' // A regular string
+        let greeting = `Hello, ${destination.toUpperCase()}!` // A template literal
+        expect(greeting).toMatch('Hello, WORLD!');
+    });
 });
