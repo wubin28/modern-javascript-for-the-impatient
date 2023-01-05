@@ -56,4 +56,8 @@ describe('Chapter 1: Values And Variables', () => {
     it('1.6: some number-producing functions return NaN to indicate a faulty input', () => {
         expect(parseFloat('pie')).toBeNaN();
     });
+
+    it('1.7: the / operator always yields a floating-point result, even if both operands are integers. e.g. 1/2 is 0.5, not 0 as it would be in Java or C++.', () => {
+        expect(1 / 2).toBe(0.5);
+    });
 });
