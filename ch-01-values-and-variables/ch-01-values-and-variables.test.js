@@ -64,4 +64,8 @@ describe('Chapter 1: Values And Variables', () => {
     it('1.7: if k and n are positive values, possibly fractional, then k % n is the value that is obtained by subtracting n from k until the result is less than n', () => {
         expect(3.5 % 1.2).toBe(1.1);
     });
+
+    it('1.7: If an operand of any arithmetic operator is the “not a number” value NaN, the result is again NaN.', () => {
+        expect(1 + parseFloat('pie')).toBeNaN();
+    });
 });
