@@ -102,4 +102,8 @@ describe('Chapter 1: Values And Variables', () => {
 <div>${destination}</div>`;
         expect(greeting).toMatch('<div>Hello</div>\n<div>Beijing</div>')
     });
+
+    it('1.11: To include backticks, dollar signs, or backslashes in template literals, escape them with backslashes.', () => {
+        expect(`\`\$\\`).toMatch('`$\\');
+    });
 });
