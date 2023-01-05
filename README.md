@@ -20,6 +20,7 @@
 
 ## Jest运行报告示例
 
+```markdown
 PASS  ./ch-01-values-and-variables.test.js
 Chapter 1: Values And Variables
 ✓ 1.2: typeof null is the string object
@@ -37,5 +38,5 @@ Chapter 1: Values And Variables
 ✓ 1.7: If an operand of any arithmetic operator is the “not a number” value NaN, the result is again NaN.
 ✓ 1.7: Prefer template literals over string concatenation. This way, you don’t have to remember what the + operator does to non-numeric operands.
 ✓ 1.9: You should never set values to undefined and never return undefined from a function, but always use null for missing values. (1 ms)
-
+```
 
