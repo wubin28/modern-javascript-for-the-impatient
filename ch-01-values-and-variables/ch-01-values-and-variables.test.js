@@ -48,4 +48,8 @@ describe('Chapter 1. Values And Variables', () => {
         expect((3 / 0).toString()).toMatch('Infinity');
         expect((-3 / 0).toString()).toMatch('-Infinity');
     });
+
+    it('1.6 0/0 is NaN, the "not a number" constant', () => {
+        expect(0/0).toBeNaN();
+    });
 });
