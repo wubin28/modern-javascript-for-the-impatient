@@ -68,4 +68,10 @@ describe('Chapter 1: Values And Variables', () => {
     it('1.7: If an operand of any arithmetic operator is the “not a number” value NaN, the result is again NaN.', () => {
         expect(1 + parseFloat('pie')).toBeNaN();
     });
+
+    it('1.7: Prefer template literals over string concatenation. This way, you don’t have to remember what the + operator does to non-numeric operands.', () => {
+        expect('I\'m ' + 52 + '.').toMatch('I\'m 52.');
+        const age = 52;
+        expect(`I'm ${age}.`).toMatch('I\'m 52.');
+    });
 });
