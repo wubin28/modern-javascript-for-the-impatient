@@ -95,4 +95,11 @@ describe('Chapter 1: Values And Variables', () => {
         expect(functions.greetingWithTemplateLiterals('Ben', 'WU')).toMatch('Hello, B. WU');
         expect(functions.greetingWithTemplateLiterals('', 'WU')).toMatch('Hello, WU');
     });
+
+    it('1.11: Any newlines inside the template literal are included in the string.', () => {
+        let destination = 'Beijing';
+        let greeting = `<div>Hello</div>
+<div>${destination}</div>`;
+        expect(greeting).toMatch('<div>Hello</div>\n<div>Beijing</div>')
+    });
 });
