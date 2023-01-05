@@ -1,4 +1,4 @@
-const add = require('./ch-01-values-and-variables');
+const functions = require('./ch-01-values-and-variables');
 
 describe('Chapter 1: Values And Variables', () => {
     it('1.2: typeof null is the string object', () => {
@@ -73,5 +73,10 @@ describe('Chapter 1: Values And Variables', () => {
         expect('I\'m ' + 52 + '.').toMatch('I\'m 52.');
         const age = 52;
         expect(`I'm ${age}.`).toMatch('I\'m 52.');
+    });
+
+    it('1.9: You should never set values to undefined and never return undefined from a function, but always use null for missing values.', () => {
+        expect(functions.returnUndefined()).toBeUndefined();
+        expect(functions.returnNull()).toBeNull();
     });
 });
