@@ -79,4 +79,9 @@ describe('Chapter 1: Values And Variables', () => {
         expect(functions.returnUndefined()).toBeUndefined();
         expect(functions.returnNull()).toBeNull();
     });
+
+    it('1.10: Some characters require a single 16-bit code unit, and others require two.', () => {
+        expect('Hello \n'.length).toBe(7); // The newline character requires a single 16-bit code unit
+        expect('Hello 😂'.length).toBe(8); // The face with tears of joy emoji requires two 16-bit code units
+    });
 });
