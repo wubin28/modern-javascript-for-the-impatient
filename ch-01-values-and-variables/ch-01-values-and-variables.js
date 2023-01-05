@@ -8,7 +8,12 @@ function returnNull() {
     return unknown;
 }
 
+function greetingWithTemplateLiterals(firstName, lastName) {
+    return `Hello, ${firstName.length > 0 ? `${firstName[0]}. ` : '' }${lastName}`;
+}
+
 module.exports = {
     returnUndefined,
     returnNull,
+    greetingWithTemplateLiterals,
 }

@@ -90,4 +90,9 @@ describe('Chapter 1: Values And Variables', () => {
         let greeting = `Hello, ${destination.toUpperCase()}!` // A template literal
         expect(greeting).toMatch('Hello, WORLD!');
     });
+
+    it('1.11: You can nest template literals inside the ${. . .} expressions.', () => {
+        expect(functions.greetingWithTemplateLiterals('Ben', 'WU')).toMatch('Hello, B. WU');
+        expect(functions.greetingWithTemplateLiterals('', 'WU')).toMatch('Hello, WU');
+    });
 });
