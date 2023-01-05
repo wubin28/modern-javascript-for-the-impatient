@@ -43,4 +43,9 @@ describe('Chapter 1. Values And Variables', () => {
     it('1.6 the toString method converts a number back to a string', () => {
         expect((3.0).toString()).toMatch('3');
     });
+
+    it('1.6 if you divide by zero, the result is Infinity or -Infinity', () => {
+        expect((3 / 0).toString()).toMatch('Infinity');
+        expect((-3 / 0).toString()).toMatch('-Infinity');
+    });
 });
