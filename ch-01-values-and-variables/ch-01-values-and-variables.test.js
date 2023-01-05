@@ -39,4 +39,8 @@ describe('Chapter 1. Values And Variables', () => {
         expect(typeof aFloat).toMatch('number');
         expect(typeof anInt).toMatch('number');
     });
+
+    it('1.6 the toString method converts a number back to a string', () => {
+        expect((3.0).toString()).toMatch('3');
+    });
 });
