@@ -119,4 +119,18 @@ describe('Chapter 1: Values And Variables', () => {
         expect(ben.age).toBe(53);
         expect(ben.location).toMatch('Beijing');
     });
+
+    it('1.12: const is like final in Java and not at all like const in C++.', () => {
+        const badFunction = () => {
+            const ben = {
+                name: 'Ben WU',
+                age: 52,
+            };
+            ben = {
+                name: 'Alex WU',
+                age: 17,
+            };
+        }
+        expect(badFunction).toThrow();
+    });
 });
