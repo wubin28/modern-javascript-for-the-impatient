@@ -143,4 +143,14 @@ describe('Chapter 1: Values And Variables', () => {
         let bensAge = ben.age;
         expect(ben.age).toBeUndefined();
     });
+
+    it('1.12: A property name can be computed. Then, use array brackets to access the property value.', () => {
+        const ben = {
+            name: 'Ben WU',
+            age: 52,
+        };
+        let field = 'Age';
+        let bensAge = ben[field.toLowerCase()];
+        expect(ben.age).toBe(52);
+    });
 });
