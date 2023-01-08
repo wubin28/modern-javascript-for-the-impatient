@@ -133,4 +133,14 @@ describe('Chapter 1: Values And Variables', () => {
         }
         expect(badFunction).toThrow();
     });
+
+    it('1.12: Use the delete operator to remove a property. Accessing a nonexistent property yields undefined.', () => {
+        const ben = {
+            name: 'Ben WU',
+            age: 52,
+        };
+        delete ben.age;
+        let bensAge = ben.age;
+        expect(ben.age).toBeUndefined();
+    });
 });
