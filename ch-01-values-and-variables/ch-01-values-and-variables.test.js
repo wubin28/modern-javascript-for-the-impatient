@@ -106,4 +106,17 @@ describe('Chapter 1: Values And Variables', () => {
     it('1.11: To include backticks, dollar signs, or backslashes in template literals, escape them with backslashes.', () => {
         expect(`\`\$\\`).toMatch('`$\\');
     });
+
+    it('1.12: A JavaScript object is simply a set of name/value pairs or “properties”. Such an object has only public data and neither encapsulation nor behavior. The object is not an instance of any particular class. In other words, it is nothing like an object in traditional object-oriented programming.', () => {
+        const ben = {
+            name: 'Ben WU',
+            age: 52,
+        }
+        let bensAge = ben.age;
+        ben.age = 53;
+        ben.location = 'Beijing';
+
+        expect(ben.age).toBe(53);
+        expect(ben.location).toMatch('Beijing');
+    });
 });
