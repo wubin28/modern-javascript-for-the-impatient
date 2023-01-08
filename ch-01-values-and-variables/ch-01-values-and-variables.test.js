@@ -153,4 +153,12 @@ describe('Chapter 1: Values And Variables', () => {
         let bensAge = ben[field.toLowerCase()];
         expect(ben.age).toBe(52);
     });
+
+    it('1.13: An object literal can have a trailing comma. This makes it easy to add other properties as the code evolves.', () => {
+        let ben = {
+            name: 'Ben WU',
+            age: 52, // add more properties below
+        }
+        expect(ben.age).toBe(52);
+    });
 });
