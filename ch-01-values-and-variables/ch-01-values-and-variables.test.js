@@ -177,4 +177,13 @@ describe('Chapter 1: Values And Variables', () => {
         }
         expect(ben.age).toBe(52);
     });
+
+    it('1.13: Use brackets for the computed property names in object literals.', () => {
+        let field = 'Age';
+        let ben = {
+            name: 'Ben WU',
+            [field.toLowerCase()]: 52,
+        }
+        expect(ben.age).toBe(52);
+    });
 });
