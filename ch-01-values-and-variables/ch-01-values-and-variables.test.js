@@ -161,4 +161,20 @@ describe('Chapter 1: Values And Variables', () => {
         }
         expect(ben.age).toBe(52);
     });
+
+    it('1.13: When declaring an object literal, property values are stored in variables whose names are equal to the property names.', () => {
+        let age = 53;
+        let ben = {
+            name: 'Ben WU',
+            age: age, // The 'age' property is set to the value of the age variable
+        }
+        expect(ben.age).toBe(53);
+
+        age = 52;
+        ben = {
+            name: 'Ben WU',
+            age, // There is a shortcut for age: age
+        }
+        expect(ben.age).toBe(52);
+    });
 });
